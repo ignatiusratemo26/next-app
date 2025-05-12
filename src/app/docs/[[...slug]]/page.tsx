@@ -1,8 +1,7 @@
-type tParams  = Promise<{ slug: string[]}>;
 
 export default async function Docs(
     props : {
-    params: tParams 
+    params: Promise<{ slug : string[] }> 
 }) {
     const { slug } = await props.params;
     if (slug?.length === 2 ) {
